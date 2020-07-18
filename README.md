@@ -1,6 +1,8 @@
 # Sign4Good
 
-Bridge the gap for the determined and their obstacles <br>
+Bridge the gap for the determined and their obstacles
+
+
 **Project duration**: 1 week  
 
 ## Demo on Desktop/Laptop computers
