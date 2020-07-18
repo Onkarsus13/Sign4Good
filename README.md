@@ -4,7 +4,7 @@ Bridge the gap for the determined and their obstacles <br>
 **Project duration**: 1 week  
 
 ## Demo on Desktop/Laptop computers
-![Working Gif](https://github.com/Zafirmk/BootStrap4-Demo-Website/blob/master/Extras/desktop.gif)
+![Working Gif](https://github.com/Zafirmk/Sign4Good/blob/master/working.gif)
 
 ## Inspiration
 Today, around one million people use Sign Language as their main way to communicate, according to [https://www.csd.org/](Communication Service for the Deaf). We decided to create an application that will help bridge the gap for those who have impaired hearing.
