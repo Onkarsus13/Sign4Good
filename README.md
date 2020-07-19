@@ -1,4 +1,4 @@
-# Sign4Good
+# Sign4Good (Bay Area Hacks 2020)
 
 <p style="text-align:center;"><img src="https://github.com/Zafirmk/Sign4Good/blob/master/logo.png" alt="Logo"></p>
 
@@ -26,7 +26,7 @@ Schematic of the CNN-RNN Architechture used in the project
 
 ![NetworkImg](https://github.com/Zafirmk/Sign4Good/blob/master/networkimg.png)
 
-Multi-gesture translation
+## Multi-gesture translation
 
 ![MultiGesture Translation](https://github.com/Zafirmk/Sign4Good/blob/master/multigesture.gif)
 
