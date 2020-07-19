@@ -1,71 +1,61 @@
 # Sign4Good
 
-Bridge the gap for the determined and their obstacles
+![Logo](https://github.com/Zafirmk/Sign4Good/blob/master/logo.png)
+
+**Project duration**: 1 Week
+**IDE**: Google Collab/Visual Studio Code  
+**Python Version**: Python 3.8
 
 
-**Project duration**: 1 week  
+## Description
+Today, around one million people use Sign Language as their main way to communicate, according to [https://www.csd.org/](CSD) (Communication Service for the Deaf). We decided to create an application that will help bridge the gap for those who have impaired hearing. Sign4Good is an application that allows users to translate their signs into text. In doing so, both parties can easily communicate with each other without having to learn sign language. 
 
-## Demo on Desktop/Laptop computers
-![Working Gif](https://github.com/Zafirmk/Sign4Good/blob/master/working.gif)
+## How it works
+1. First a hand tracking software (built with Google Mediapipe) is used to track the movement of the hand.
 
-## Inspiration
-Today, around one million people use Sign Language as their main way to communicate, according to [https://www.csd.org/](Communication Service for the Deaf). We decided to create an application that will help bridge the gap for those who have impaired hearing.
+2. Once a gesture is recorded, the .mp4 file of the gesture is saved as ```testvideo.mp4```  
 
-## What it does
-Sign4Good allows users to sign a word (full gesture) which is then translated into text. This allows people to communicate without having to fully learn sign language
+3. ```testvideo.mp4``` is fed into a trained neural network (CNN connected to an RNN) and the network outputs what the gesture could be
 
-## How I built it
-The hand tracking application was built with opencv. It segments the hand from the frame using masking techniques. The translation of the sign is done using a deep neural network that uses a CNN which recognizes the features of the image. These features are then fed into an RNN which checks the differences between high level frames.
+4. Multi-word signing is also supported. The program is written in such a way that it can take the first n frames to be a single gesture and the next n frames to be another gesture. 
 
-```
-Model: "sequential_1"
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-conv2d_1 (Conv2D)            (None, 256, 256, 32)      896       
-_________________________________________________________________
-max_pooling2d_1 (MaxPooling2 (None, 128, 128, 32)      0         
-_________________________________________________________________
-conv2d_2 (Conv2D)            (None, 128, 128, 64)      18496     
-_________________________________________________________________
-max_pooling2d_2 (MaxPooling2 (None, 64, 64, 64)        0         
-_________________________________________________________________
-conv2d_3 (Conv2D)            (None, 64, 64, 128)       73856     
-_________________________________________________________________
-max_pooling2d_3 (MaxPooling2 (None, 32, 32, 128)       0         
-_________________________________________________________________
-conv2d_4 (Conv2D)            (None, 32, 32, 256)       295168    
-_________________________________________________________________
-max_pooling2d_4 (MaxPooling2 (None, 16, 16, 256)       0         
-_________________________________________________________________
-reshape_1 (Reshape)          (None, 16, 4096)          0         
-_________________________________________________________________
-lstm_1 (LSTM)                (None, 16, 64)            1065216   
-_________________________________________________________________
-lstm_2 (LSTM)                (None, 16, 32)            12416     
-_________________________________________________________________
-lstm_3 (LSTM)                (None, 32)                8320      
-_________________________________________________________________
-dense_1 (Dense)              (None, 6)                 198       
-=================================================================
-Total params: 1,474,566
-Trainable params: 1,474,566
-Non-trainable params: 0
-_________________________________________________________________
 
-```
 
-## Challenges I ran into
-Segmenting the fingers from the hand in the hand detection
-Handling the large amounts of data
 
-## Accomplishments that I'm proud of
-Being able to achieve a model with high accuracy
-Segmenting fingers for the hand tracking
+Schematic of the CNN-RNN Architechture used in the project
 
-## What I learned
-Working with Video Detection 
+![NetworkImg](https://github.com/Zafirmk/Sign4Good/blob/master/networkimg.png)
+
+Multi-gesture translation
+
+![MultiGesture Translation](https://github.com/Zafirmk/Sign4Good/blob/master/multigesture.gif)
 
 ## What's next for Sign4Good
 Train using more words
-Train using different sign languages 
+Train using different sign languages
+Implement a word to sign feature
+
+## Getting Started
+
+1. Clone this repo using the following command  
+```
+$ git clone https://github.com/Zafirmk/Sign4Good.git
+$ cd Pneumonia-Detector
+```
+2. Download the [dataset](http://facundoq.github.io/unlp/lsa64/)
+
+3. Change the directories in the source code to your own directories
+
+4. Check [devpost](https://devpost.com/software/sign4good) to see which signs you can try
+
+
+### Prerequisites
+Things you need to install before running:
+*  [Python](https://www.python.org/)
+*  [OpenCV](https://opencv.org/)
+*  [Google Collab](https://colab.research.google.com/)
+*  [Keras](https://keras.io/)
+
+#### Additional Notes
+*  Datasets obtained from [Facundoq](http://facundoq.github.io/unlp/lsa64//)
+
