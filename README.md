@@ -1,6 +1,6 @@
 # Sign4Good
 
-![Logo](https://github.com/Zafirmk/Sign4Good/blob/master/logo.png=100x20)
+<p style="text-align:center;"><img src="https://github.com/Zafirmk/Sign4Good/blob/master/logo.png" alt="Logo"></p>
 
 **Project duration**: 1 Week.   
 **IDE**: Google Collab/Visual Studio Code.   
