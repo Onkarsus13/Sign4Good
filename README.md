@@ -2,8 +2,9 @@
 
 ![Logo](https://github.com/Zafirmk/Sign4Good/blob/master/logo.png)
 
-**Project duration**: 1 Week
-**IDE**: Google Collab/Visual Studio Code  
+
+**Project duration**: 1 Week.   
+**IDE**: Google Collab/Visual Studio Code.   
 **Python Version**: Python 3.8
 
 
