@@ -40,7 +40,7 @@ Implement a word to sign feature
 1. Clone this repo using the following command  
 ```
 $ git clone https://github.com/Zafirmk/Sign4Good.git
-$ cd Pneumonia-Detector
+$ cd Sign4Good
 ```
 2. Download the [dataset](http://facundoq.github.io/unlp/lsa64/)
 
