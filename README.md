@@ -42,7 +42,7 @@ Implement a word to sign feature
 $ git clone https://github.com/Zafirmk/Sign4Good.git
 $ cd Sign4Good
 ```
-2. Download the [dataset](http://facundoq.github.io/unlp/lsa64/)
+2. Download the [dataset](http://facundoq.github.io/datasets/lsa64/)
 
 3. Change the directories in the source code to your own directories
 
@@ -57,5 +57,5 @@ Things you need to install before running:
 *  [Keras](https://keras.io/)
 
 #### Additional Notes
-*  Datasets obtained from [Facundoq](http://facundoq.github.io/unlp/lsa64//)
+*  Datasets obtained from [Facundoq](http://facundoq.github.io/datasets/lsa64/)
 
